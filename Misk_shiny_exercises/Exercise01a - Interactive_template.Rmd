@@ -1,0 +1,27 @@
+---
+title: "Interactive Markdown Exercise 1"
+output: html_document
+runtime: shiny
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+library(tidyverse)
+```
+
+# An interactive ggplot
+
+Add the code from our tutorial to make an interactive document:
+
+```{r echo = FALSE}
+
+inputPanel({
+  # ...
+})
+
+renderPlot({
+  # ...
+})
+
+```
+

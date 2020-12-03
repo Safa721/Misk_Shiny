@@ -1,0 +1,23 @@
+---
+output: pdf_document
+params:
+  dataframe: dataframe,
+  x: x,
+  y: y
+---
+
+```{r setup, include=FALSE}
+library(ggplot2)
+
+source("functions.R")
+
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Plot
+
+A plot of `params$y` versus `params$x`. 
+
+```{r}
+makePlot(params$dataframe, params$x, params$y)
+```

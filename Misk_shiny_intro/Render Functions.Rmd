@@ -1,0 +1,37 @@
+---
+title: "The render functions"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 
+
+`output$plot <- renderPlot(...)` says 
+
+this is a recipie for how you update this output. 
+
+You're not saying what to do, youre saying how to do it. 
+If you want to update output$plot, this is how to do it. When, is up to shiny.
+
+i.e. this code is the *recipe* that should be used to update the output "plot1".
+**not** Go update the output of "plot1" wit hthe result of this code.
+
+So we describe No
+
+Normally we tell R "Do this" but here, we just describe a computation, we trust shiny to perform it when necessary.
+
+**Know the difference between telling shiny to do something, and telling shiny how to do something.**
+
+## Reactive expressions
+
+i.e. expressions that are reactive. 
+
+An expression is a code that produces a value
+Reactive means it detects changes in anything reactive it reads. So if something changes it knows
+
+The output of `reactive({})` is a function.
+
+You can read reactive expression from inside other reactive expressions
